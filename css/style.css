@@ -1,3 +1,126 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin:0 auto;
+    background-size: cover;	
+	/*백그라운드 위치 옵션을 center 정중앙에 위치  */
+	background-position: center;
+	
+	/*기본적으로 백그라운드의 옵션은 repeat이다. */
+	background-repeat: no-repeat;
+	
+	/* 백그라운드 이미지를 보여주기 위한 크기 옵션  */
+	weight: 100%;
+    height: 100%;
+
+	/* 외부 여백 옵션 */
+	margin: 50px;
+}
+
+li {
+    list-style-type: none;
+}
+
+div {
+    display: block;
+}
+
+div#container {
+    width: 100%;
+    height: 100vh;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,228,196, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+div#quote {
+    position: absolute;
+    clear: left;
+    left: 180px;
+    bottom: 50px;
+
+    margin-top: 35rem;
+    text-align: center;
+    word-break: keep-all;
+}
+
+div#quote span {
+    line-height: 1.1;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+
+div#weather {
+    position: absolute;
+    clear: right;
+    right: 20px;
+}
+
+h2#clock{
+    left:0px;
+    clear: left;
+    position: absolute;
+}
+
 .hidden {
     display: none;
+}
+
+.input-todo{
+    width: 600px;
+    padding: var(--input-padding);
+    display: inline-block;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid rgb(255, 143, 86);
+    color: #000;
+    font-size: 2.25em;
+    line-height: 1.2;
+    font-weight: 500;
+    outline: none;
+    text-align: center;
+    transition: border-color .2s ease;
+    -webkit-border-radius: 0;
+}
+
+#todo-list li{
+    margin: 10px 0;
+    line-height: 1.7;
+    font-size: 18px;
+    grid-template-columns: 1fr 15fr 1fr;
+}
+
+.login-title {
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 30px;
+    line-height: 150px;
+}
+
+#login-form input{
+    border: none;
+    border-bottom: 1px solid rgb(255, 143, 86);
+    width: 360px;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+#login-form button{
+    border: 1px solid #fff;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 7px;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
 }

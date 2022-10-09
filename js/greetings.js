@@ -8,6 +8,7 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 // const loginButton = document.querySelector("#login-form button");
 const greeting = document.querySelector("#greeting");
+const todoForm = document.querySelector("#todo-form");
 
 // string 반복 사용시, 대문자 변수로 저장하고 변수를 사용한다 : 변수는 JS에서 체크해준다
 const HIDDEN_CLASSNAME = "hidden";
@@ -26,6 +27,7 @@ function onLoginSubmit(event){
 function paintGreetings(username) {
     greeting.innerText = `Hello, ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    todoForm.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -36,7 +38,6 @@ if (savedUsername === null) {
     loginForm.addEventListener("submit", onLoginSubmit);    
 } else {
     paintGreetings(savedUsername);
-    
 }
 
 // 1. submit 이벤트 실행 잘됨

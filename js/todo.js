@@ -26,9 +26,12 @@ function paintToDo(newToDo) {
     li.id = newToDo.id;
     const span = document.createElement("span");
     span.innerText = newToDo.text;
+
+    // delete function
     const button = document.createElement("button");
     button.innerText = "❌";
     button.addEventListener("click",deleteToDo);
+
     li.appendChild(span);   // 투두 리스트 추가
     li.appendChild(button); // 투두 리스트 옆에 삭제버튼 추가     
     toDoList.appendChild(li);
@@ -38,12 +41,15 @@ function paintToDo(newToDo) {
 
 function handleToDoSubmit(e) {
     e.preventDefault();
+
     const newToDo = toDoInput.value;    
     toDoInput.value = "";
+
     const newToDoObj = {
         text:newToDo,
         id: Date.now(),
     }
+    
     toDos.push(newToDoObj);    // 로컬스토리지에 저장 :: DB!
     paintToDo(newToDoObj); // text인 newToDo만 가지고있음 > object
     saveToDos();
@@ -59,9 +65,3 @@ if(savedToDos !== null) {
     // forEach : array의 각 item에 대해 function을 실행할 수 있다.
     parsedToDos.forEach(paintToDo);
 }
-
-function sexyFilter() {
-
-}
-
-[1,2,3,4,5].filter(sexyFilter);

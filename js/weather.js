@@ -7,10 +7,17 @@ function onGeoOk(position){
     fetch(url)
     .then(response => response.json())
     .then(data => {
+        const weatherBody = document.querySelector("#weather");
         const weather = document.querySelector("#weather span:first-child");
         const city = document.querySelector("#weather span:last-child");
+        // weather img icon
+        const img = document.createElement("img");
+        const icon = data.weather[0].icon;
+
         city.innerText = data.name;
-        weather.innerText = data.weather[0].main;
+        weather.innerText = data.weather[0].main;        
+        img.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+        weatherBody.appendChild(img);
     });
 }
 function onGeoError(){
