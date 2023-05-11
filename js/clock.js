@@ -1,9 +1,5 @@
 const clock = document.querySelector("h2#clock");
 
-function sayHello(){
-    console.log("hello");
-}
-
 function getClock() {
     const date = new Date();
     const hrs = String(date.getHours()).padStart(2,"0");
@@ -18,4 +14,3 @@ getClock();
 setInterval(getClock, 1000);
 
 // timeout : 설정한 시간이 지난 뒤에 실행된다 (1번)
-// setTimeout(sayHello, 2000);

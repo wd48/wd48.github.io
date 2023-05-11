@@ -1,8 +1,3 @@
-// option 1
-// const loginForm = document.getElementById("login-form");
-// const loginInput = loginForm.querySelector("input");
-// const loginButton = loginForm.querySelector("button");
-
 // option 2
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
@@ -13,8 +8,6 @@ const todoForm = document.querySelector("#todo-form");
 // string 반복 사용시, 대문자 변수로 저장하고 변수를 사용한다 : 변수는 JS에서 체크해준다
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username"
-
-// const link = document.querySelector("a");
 
 function onLoginSubmit(event){
     event.preventDefault(); // 브라우저가 submit 할 때 하는 기본동작(=새로고침) 차단
@@ -39,17 +32,3 @@ if (savedUsername === null) {
 } else {
     paintGreetings(savedUsername);
 }
-
-// 1. submit 이벤트 실행 잘됨
-// ~ onLoginSubmit() (X)
-// () 를 브라우저가 확인하는 그 순간 바로 실행한다! (IIFE)
-// 브라우저 : 1. onLoginSubmit 확인 2. 실행
-// 2. 
-
-// function handleLinkClick(event) {
-//     event.preventDefault();
-//     console.dir(event);
-// }
-
-// link.addEventListener("click", handleLinkClick); // () 추가하면 한번만 실행하고 끝난다
-// handleLinkClick({~~~~~~~~~~~~~informations~~~~~~~~~~~~~})
