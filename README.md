@@ -1,1 +1,0 @@
-# xy_nomad_js.github.io
