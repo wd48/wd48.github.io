@@ -18,3 +18,6 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 [^1]: Requires Bundler. Install with `gem install bundler`.
 
 [download]: https://github.com/hydecorp/hydejack-starter-kit/archive/master.zip
+
+## Reference site
+[link]: https://supermemi.tistory.com/146
